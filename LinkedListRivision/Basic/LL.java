@@ -2,6 +2,13 @@
 
 public class LL {
     Node head;
+    private int size;
+
+    public LL() {
+        this.size=0;
+    }
+
+    
     class Node{
         String data;
         Node next;
@@ -9,142 +16,94 @@ public class LL {
         public Node(String data) {
             this.data=data;
             this.next=null;
+            size++;
         }
 
         
     }
-    // Add first
-    public void addfirst(String data){
-        Node newNode=new Node(data);
+  
+    public void AddFirst(String data){
+        Node newnNode=new Node(data);
         if(head == null){
-            head=newNode;
+            head=newnNode;
             return;
         }
-        newNode.next=head;
-        head=newNode;
+        
+        newnNode.next=head;
+        head=newnNode;
     }
 
-    
-
-    //print
-
-    public void print(){
-        Node currNode=head;
-        while(currNode != null){
-            System.out.print(currNode.data + " -> ");
-            currNode=currNode.next;
-        }
-        System.out.println("null");
-
-    }
-
-
-    // Add Last
     public void addlast(String data){
-        Node newNode=new Node(data);
+        Node newnNode=new Node(data);
         if(head == null){
-            head=newNode;
+            head=newnNode;
             return;
         }
         Node currNode=head;
         while(currNode.next != null){
             currNode=currNode.next;
         }
-        currNode.next=newNode;
-
-
+        currNode.next=newnNode;
+    }
+    public void print(){
+      
+        if(head == null){
+            System.out.println("List is empty");
+            return;
+        }
+        Node currNode=head;
+        while(currNode != null){
+            System.out.print(currNode.data + " -> ");
+            currNode=currNode.next;
+        }
+        System.out.print(" Null  ");
+        
+    }
+    public void DeleteFirst(){
+        if(head == null){
+            return;
+        }
+        size--;
+        head=head.next;
     }
 
-    // DeleteFirst
-   public void DeleteFirst(){
-    if(head == null){
-        System.out.println("List is empty");
-        return;
+        public void DeleteLast(){
+        if(head == null){
+            return;
+        }
+        size--;
+        if(head.next == null){
+            head =null;
+        }
+      Node  Secondlast=head;
+      Node lastNode=head.next;
+      while(lastNode.next != null){
+        Secondlast=Secondlast.next;
+        lastNode=lastNode.next;
+      }
+      Secondlast.next=null;
 
     }
-    head=head.next;
-   }
-
-   // DeleteLast
-   public void DeleteLast(){
-    if(head == null){
-        System.out.println("List is empty");
-        return;
+    public int getsize(){
+        return size;
     }
-    Node secNode=head;
-    while(secNode.next.next != null){
-        secNode=secNode.next;
-    }
-    secNode.next=null;
-
-   }
-
-   // Search Element
-   public boolean  SearchElement(String key){
-    Node currNode=head;
-    while(currNode != null){
-        if(currNode.data.equals(key)){
-            return true;
-        } 
-        currNode=currNode.next;
-
-    }
-    return false;
-   }
-
-   // Reverse Linked List
-
-   public void Reverse(){
-
-    if(head == null || head.next == null){
-        return ;
-    }
-    Node previouNode=head;
-    Node currNode=head.next;
-     
-    while(currNode != null){
-        Node nextNode=currNode.next;
-        currNode.next=previouNode;
-
-        //update
-        previouNode=currNode;
-        currNode=nextNode;
-    }
-    head.next=null;
-    head=previouNode;
-
-    
-   }
-
 
     public static void main(String[] args) {
         LL list=new LL();
-        list.addfirst("a");
-        list.addfirst("b");
-        list.print();
+        list.AddFirst("1");
+        list.AddFirst("2");
+        list.addlast("3");
+         list.addlast("4");
+         list.print();
+         list.DeleteFirst();
+         list.print();
+         list.DeleteLast();
+         list.print();
+         System.out.println(list.getsize());
+         
 
-        list.addlast("z");
-        list.print();
-
-        list.DeleteFirst();
-        list.print();
-
-        list.DeleteLast();
-        list.print();
-
-        System.out.println("Search key " + list.SearchElement("a"));
-
-        list.addlast("b");
-        list.addlast("c");
-        list.addlast("d");
-
-        list.Reverse();
-        list.print();
-
+         
+          
       
-
-        
     }
-
-
 }
