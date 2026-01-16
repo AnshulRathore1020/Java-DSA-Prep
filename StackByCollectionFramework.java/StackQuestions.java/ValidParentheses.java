@@ -11,8 +11,8 @@ public class ValidParentheses {
                 return false;
 
                 char top =stack.pop();
-                if((ch == ')' &&  top != '(') || (ch == '}' && top != '{') || (ch == ']' && top != '[')){
-                    return false; // mismatched pair
+                if((ch == ')' && top != '(') || (ch == '}' && top != '{') || (ch == ']' && top != '[')){
+                    return false;
                 }
             }
            
@@ -24,6 +24,6 @@ public class ValidParentheses {
 
     public static void main(String[] args) {
         System.out.println(isvalid("({[]})"));
-        System.out.println(isvalid("()[}]"));
+        System.out.println(isvalid("()[{}]"));
     }
 }
