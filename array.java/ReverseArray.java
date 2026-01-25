@@ -7,7 +7,7 @@ public class ReverseArray {
         
         int left=0;
         int right=nums.length -1;
-        boolean reverse=true;
+        // boolean reverse=true;
 
         while(left < right) {
             int temp=nums[left];
@@ -19,7 +19,7 @@ public class ReverseArray {
         }
         System.out.print("reversed arrary");
         for(int num:nums){
-            System.out.print(num);
+            System.out.println(num);
         }
         
         
