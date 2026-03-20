@@ -1,16 +1,27 @@
+import java.util.Scanner;
+
 public class MissingNumber {
- public static void main(String[] args) {
+    public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
 
-    int[] arr={0,1,2,3,4,5,6,8,9};
-    int n= arr.length;
-    int totalsum= n*(n+1) /2;
-    int actualsum=0;
-    for(int num:arr){
-      actualsum += num;
+        int n = sc.nextInt();  // total numbers
+
+        int[] nums = new int[n - 1];  // one number missing
+
+        for (int i = 0; i < n - 1; i++) {
+            nums[i] = sc.nextInt();
+        }
+
+        int totalSum = n * (n + 1) / 2;
+
+        int actualSum = 0;
+        for (int num : nums) {
+            actualSum += num;
+        }
+
+        System.out.println("Missing number is: " + (totalSum - actualSum));
+
+        sc.close();
     }
-    int fina=totalsum-actualsum;
-    System.out.println(fina );
-
- }
 }

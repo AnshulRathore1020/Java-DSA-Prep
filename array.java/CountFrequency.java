@@ -1,19 +1,24 @@
 
-import java.util.HashMap;
-
+import java.util.*;
 public class CountFrequency {
    public static void main(String[] args) {
     
-    int num[]={1,1,1,2,2,2,3,4,4,5};
-    HashMap<Integer, Integer> freq=new HashMap<>();
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int[] arr=new int[n];
+    for (int i = 0; i < n; i++) {
+        arr[i]=sc.nextInt();
+    }
+    LinkedHashMap<Integer,Integer> map=new LinkedHashMap<>();
+    for(int nums:arr){
+        map.put(nums, map.getOrDefault(nums, 0)+1);
+    }
+    for(int key:map.keySet()){
+       System.out.println(key + " -> " + map.get(key));
 
-     for (int numss: num) {
-            freq.put(numss, freq.getOrDefault(numss, 0) + 1);
-        }
+    }
+    sc.close();
 
-        for (int key : freq.keySet()) {
-            System.out.println(key + " occurs " + freq.get(key) + " times");
-        }
    }
 } 
 
