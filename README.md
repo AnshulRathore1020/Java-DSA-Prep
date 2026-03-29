@@ -1,25 +1,25 @@
-# Java DSA Practice
+# 🧠 Java DSA Prep — Placement Series
 
-This repository contains my topic-wise practice of Data Structures and Algorithms in Java for campus placements and coding interviews.
+Topic-wise Data Structures & Algorithms in Java. Prepared for campus placements and product-based company interviews.
 
-## Topics
-- Arrays, Strings
-- Recursion, Backtracking
-- Linked Lists, Stacks, Queues
-- Binary Search, Sorting
-- Bit Manipulation, Miscellaneous
+## 📚 Topics Covered
+- [x] Arrays & Strings
+- [x] LinkedList
+- [x] Stacks & Queues
+- [x] Binary Search
+- [x] Recursion & Backtracking
+- [ ] Trees & Binary Search Trees (In Progress)
+- [ ] Graphs — BFS/DFS
+- [ ] Dynamic Programming
 
-## How to run
-- Use any Java IDE (VS Code/IntelliJ/Eclipse).
-- Compile: `javac <FileName>.java`
-- Run: `java <ClassName>`
+## 🎯 Goal
+Solve 150+ problems before placements. Current streak maintained daily.
 
-## Notes
-- Each file includes a `main` method or test cases showing sample usage.
-- I keep improving solutions with better time and space complexity.
+## 📊 Progress
+| Platform | Problems Solved |
+|----------|----------------|
+| LeetCode | 50+ |
+| GeeksForGeeks | 30+ |
 
-## Contact
-- Anshul Rathore — final-year B.Tech (IT), IPS Academy, Indore
-- LinkedIn: Anshul-Rathore-it
-- Email: anshulrathore9009@gmail.com
-Topic-wise Java DSA practice for placements and interviews.
+## 🛠️ Language
+Java 17 — all solutions with time & space complexity comments.
